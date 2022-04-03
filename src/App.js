@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
+	const [pokemonData, setPokemonData] = useState([]);
+  const [value, setValue] = useState([])
+  
+
+  useState(() => {
+  	fetch("https://pokemonapi.net/api/v2/pokemon/")
+    .then((response) => response.json())
+    .then((data) => {
+    	console.log(data);
+      setPokemonData(data.results);
+    })
+    .catch((error) => {
+    	console.log(error);
+    });
+  }, [value]);
+  
+  const handleChange = (value) => {
+    setValue(value ? value : 25);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  	<div className="app">
+    	<input
+      	type="number"
+        value={value}
+        onChange={(e) => handleChange(e.target.value)}
+      />
+      { pokemonData && <img src={pokemonData?.sprites?.front_default} />}
     </div>
-  );
+  )
 }
 
 export default App;
