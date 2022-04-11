@@ -4,25 +4,16 @@ import './index.css';
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
-import Expenses from "./routes/expenses";
-import Invoices from "./routes/invoices";
-import Invoice from "./routes/invoice";
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+import Pokemons from "./routes/pokemons";
+import Pokemon from "./routes/pokemon";
 
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="expenses" element={<Expenses />} />
-        <Route path="invoices" element={<Invoices />}>
-          <Route path=":invoiceId" element={<Invoice />} />
+        <Route path="pokemons" element={<Pokemons />}>
+          <Route path=":pokemonId" element={<Pokemon />} />
         </Route>
         <Route
           path="*"

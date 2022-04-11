@@ -1,8 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
-import { getInvoices } from "../data";
+import { getPokemons } from "../pokemonData";
 
-export default function Invoices() {
-  let invoices = getInvoices();
+export default function Pokemons() {
+  let pokemons = getPokemons();
   return (
     <div style={{ display: "flex" }}>
       <nav
@@ -11,13 +11,13 @@ export default function Invoices() {
           padding: "1rem",
         }}
       >
-        {invoices.map((invoice) => (
+        {pokemons.map((pokemon) => (
           <Link
             style={{ display: "block", margin: "1rem 0" }}
-            to={`/invoices/${invoice.number}`}
-            key={invoice.number}
+            to={`/pokemons/${pokemon.id}`}
+            key={pokemon.id}
           >
-            {invoice.name}
+            {pokemon.name}
           </Link>
         ))}
       </nav>
