@@ -1,5 +1,83 @@
 .app {
+  background: url("img/pokemon_battle_base.png");
   display: flex;
-  align-items: center;
+  height: auto;
+  min-height: 100vh;
+}
+
+.pokedex {
+  background: url("img/pokedex_screen.jpeg"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 1000px;
+}
+
+.pokemonDisplay {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+}
+
+.pokemonDisplay img {
+  margin-top: 40%;
+  height: auto;
+  width: 4000px;
+}
+
+.pokemonData {
+
+}
+
+.title {
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+h2 {
+  position: absolute;
+  top: 125px;
+  left: 490px;
+  font-size: 2em;
+  color: #fff;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+h3 {
+  position: absolute;
+  top: 175px;
+  left: 490px;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+h4 {
+  position: absolute;
+  top: 340px;
+  left: 780px;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+h5 {
+  position: absolute;
+  top: 395px;
+  left: 780px;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: sans-serif;
 }

@@ -2,20 +2,20 @@ let pokemons = [
 {
     name: "pikachu",
     id: 195,
-    height: 0.3 + " m",
-    weight: 12 + " kg",
+    height: 0.3 + " ft.",
+    weight: 12 + " lbs.",
 },
 {
     name: "bulbusaur",
     id: 200,
-    height: 1.2 + " m",
-    weight: 1.0 + " kg",
+    height: 1.2 + " ft.",
+    weight: 1.0 + " lbs.",
 },
 {
-    name: "ash",
+    name: "ash ketchup",
     id: 23,
-    height: 1.3 + " m",
-    weight: 23 + " kg",
+    height: 1.3 + " ft.",
+    weight: 23 + " lbs.",
 },
 ];
   

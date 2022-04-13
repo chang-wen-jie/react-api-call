@@ -5,17 +5,11 @@ export default function Pokemon() {
     let params = useParams();
     let pokemon = getPokemon(parseInt(params.pokemonId));
     return (
-        <main style={{ padding: "1rem" }}>
+        <main>
           <h2>{pokemon.id}</h2>
-          <p>
-            Name: {pokemon.name}
-          </p>
-          <p>
-            Height: {pokemon.height}
-          </p>
-          <p>
-            Weight: {pokemon.weight}
-          </p>
+          <h3>{pokemon.name}</h3>
+          <h4>{pokemon.height}</h4>
+          <h5>{pokemon.weight}</h5>
         </main>
       );
 }
